@@ -1,0 +1,62 @@
+$paragraph-spacing: 26px;
+
+$text-sizing: (
+  'centi': (
+    'small': (
+      'font-size': 12px,
+      'line-height': 16px
+    )
+  ),
+  'deci': (
+    'small': (
+      'font-size': 14px,
+      'line-height': 20px
+    )
+  ),
+  'base': (
+    'small': (
+      'font-size': 16px,
+      'line-height': 26px
+    )
+  ),
+  'deca': (
+    'small': (
+      'font-size': 18px,
+      'line-height': 26px
+    ),
+    'large': (
+      'font-size': 20px,
+      'line-height': 30px
+    )
+  ),
+  'hecto': (
+    'small': (
+      'font-size': 22px,
+      'line-height': 28px
+    ),
+    'large': (
+      'font-size': 24px,
+      'line-height': 32px
+    )
+  ),
+  'kilo': (
+    'small': (
+      'font-size': 24px,
+      'line-height': 32px
+    ),
+    'large': (
+      'font-size': 28px,
+      'line-height': 36px
+    )
+  ),
+  'mega': (
+    'small': (
+      'font-size': 36px,
+      'line-height': 48px
+    ),
+    'large': (
+      'font-size': 40px,
+      'line-height': 60px
+    )
+  )
+);

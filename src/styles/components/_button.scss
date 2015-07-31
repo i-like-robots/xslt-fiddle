@@ -1,0 +1,18 @@
+.Button {
+  @include base-padding('small');
+  @extend %select-none;
+  border: 1px solid $palette-gray-2;
+  box-shadow: $style-inset-highlight-top;
+  background: $palette-blue-1;
+  font: inherit;
+  color: #fff;
+
+  &:hover {
+    background: $palette-blue-2;
+  }
+
+  &:active {
+    box-shadow: $style-inset-shadow-top;
+  }
+
+}

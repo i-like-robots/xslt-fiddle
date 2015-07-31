@@ -1,0 +1,39 @@
+.t-centi {
+  @include responsive-text-size('centi');
+}
+
+.t-deci {
+  @include responsive-text-size('deci');
+}
+
+.t-base {
+  @include responsive-text-size('base');
+}
+
+.t-deca {
+  @include responsive-text-size('deca');
+}
+
+.t-hecto {
+  @include responsive-text-size('hecto');
+}
+
+.t-kilo {
+  @include responsive-text-size('kilo');
+}
+
+.t-mega {
+  @include responsive-text-size('mega');
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-right {
+  text-align: right;
+}

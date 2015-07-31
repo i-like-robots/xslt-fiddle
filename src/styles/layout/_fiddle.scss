@@ -1,0 +1,70 @@
+.Fiddle {
+  margin: base-margin('top', 'small') 0 base-margin('bottom', 'small');
+}
+
+.Fiddle-sections {
+  position: relative;
+
+  @include respond-above('large') {
+    display: table;
+    table-layout: fixed;
+    border-spacing: base-margin('right', 'small');
+    width: 100%;
+  }
+
+}
+
+.Fiddle-section {
+  @include base-margin('small');
+  position: relative;
+
+  @include respond-above('large') {
+    display: table-cell;
+    margin: 0;
+  }
+
+}
+
+.Fiddle-input {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50vh;
+  height: -webkit-calc(100vh - 220px);
+  height: calc(100vh - 220px);
+  font: normal 15px/1.5 Consolas, monospace;
+  vertical-align: bottom;
+}
+
+.Fiddle-inputLabel {
+  display: block;
+  margin: 0 0 (base-margin('bottom', 'small') / 2) base-padding('left', 'small');
+}
+
+.Fiddle-inputType {
+  position: absolute;
+  top: -6px;
+  right: 0;
+  border: 1px dotted $palette-blue-2;
+  padding: 4px 8px 3px;
+  background: $palette-blue-3;
+}
+
+.Fiddle-inputRadio {
+
+  &:first-child {
+    margin-right: base-margin('right', 'small');
+  }
+
+}
+
+.Fiddle-actions {
+  margin: 0 base-margin('right', 'small');
+  text-align: right;
+}
+
+.Fiddle-notifications {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

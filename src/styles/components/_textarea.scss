@@ -1,0 +1,14 @@
+.Textarea {
+  @include base-padding('small');
+  border: 1px solid $palette-gray-2;
+  box-shadow: $style-inset-shadow-top;
+  background: #FFF;
+  font: inherit;
+  resize: none;
+
+  &:focus {
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+}

@@ -1,0 +1,21 @@
+{
+  "name": "xslt-fiddle",
+  "version": "0.0.0",
+  "description": "",
+  "main": " ",
+  "scripts": {
+    "build-styles": "node-sass src/styles/main.scss public/bundle.css --output-style compressed --recursive --source-map public/bundle.css.map",
+    "build-scripts": "webpack src/scripts/main.js public/bundle.js -p --devtool source-map",
+    "watch-styles": "npm run build-styles -- --watch",
+    "watch-scripts": "npm run build-scripts -- --watch",
+    "build": "parallelshell 'npm run build-styles' 'npm run build-scripts'",
+    "watch": "parallelshell 'npm run watch-styles' 'npm run watch-scripts'"
+  },
+  "author": "Matt Hinchliffe",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^3.2.0",
+    "parallelshell": "^2.0.0",
+    "webpack": "^1.10.1"
+  }
+}

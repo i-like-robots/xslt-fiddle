@@ -1,0 +1,7 @@
+@mixin base-margin($size) {
+  margin: map-get($base-margins, $size);
+}
+
+@mixin base-padding($size) {
+  padding: map-get($base-padding, $size);
+}

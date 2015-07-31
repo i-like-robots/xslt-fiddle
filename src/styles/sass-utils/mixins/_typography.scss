@@ -1,0 +1,23 @@
+@mixin text-size($text-size, $breakpoint-name: 'small') {
+  $text-size-properties: text-properties-for($text-size, $breakpoint-name);
+
+  @if $text-size-properties {
+    font-size: map-get($text-size-properties, 'font-size');
+    line-height: map-get($text-size-properties, 'line-height');
+  }
+}
+
+@mixin responsive-text-size($text-size, $default-breakpoint: 'small') {
+  @include text-size($text-size, $default-breakpoint);
+
+  $text-breakpoints-map: text-breakpoints-for($text-size);
+  $text-breakpoints-keys: map-keys($text-breakpoints-map);
+
+  @each $breakpoint-name in $text-breakpoints-keys {
+    @if $breakpoint-name != $default-breakpoint {
+      @include respond-above($breakpoint-name) {
+        @include text-size($text-size, $breakpoint-name);
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.Radio {
+  @extend %select-none;
+  display: inline-block;
+  line-height: 1;
+
+  input[type=radio] {
+    @extend %visually-hidden;
+    width: 1em;
+    height: 1em;
+    margin: 0 -1em -1em 0;
+  }
+
+}
+
+.Radio-button {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: top;
+
+  &:before {
+    content: '';
+    position: absolute;
+    box-shadow: $style-inset-shadow-top;
+    box-sizing: border-box;
+    width: 1em;
+    height: 1em;
+    border: 1px solid $palette-gray-2;
+    border-radius: 100%;
+    background: $palette-gray-3;
+
+    :focus + & {
+      box-shadow: 0 0 0 3px $palette-yellow;
+    }
+  }
+
+  &:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: $style-inset-highlight-top;
+    border-radius: 100%;
+    width: 0.5em;
+    height: 0.5em;
+    background: $palette-gray-1;
+
+    input[type=radio]:checked + & {
+      opacity: 1;
+    }
+
+  }
+
+}

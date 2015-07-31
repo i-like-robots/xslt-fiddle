@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>XSLT Fiddle</title>
+  <meta name="description" content="A playground to test XSL transformations">
+  <link rel="stylesheet" href="bundle.css">
+	<script src="bundle.js" async></script>
+</head>
+<body>
+
+	<header class="Header">
+		<h1 class="t-kilo">XSLT Fiddle</h1>
+		<p class="t-deca">A playground to test XSL transformations</p>
+	</header>
+
+	<form
+		class="Fiddle"
+		data-component="Fiddle"
+		data-element-type="[name=type]"
+		data-element-xml="[name=xml]"
+		data-element-xsl="[name=xsl]"
+		data-element-output="[name=output]">
+
+		<div class="Fiddle-sections">
+
+			<div class="Fiddle-section">
+				<label>
+					<span class="Fiddle-inputLabel">Source</span>
+					<textarea name="xml" class="Fiddle-input Textarea" data-component="Autocomplete"></textarea>
+				</label>
+
+				<div class="Fiddle-inputType t-deci">
+					<label class="Fiddle-inputRadio Radio" title="Source type: XML">
+						XML
+						<input type="radio" name="type" value="XML" checked>
+						<div class="Radio-button"></div>
+					</label>
+					<label class="Fiddle-inputRadio Radio" title="Source type: HTML">
+						HTML
+						<input type="radio" name="type" value="HTML">
+						<div class="Radio-button"></div>
+					</label>
+				</div>
+			</div>
+
+			<div class="Fiddle-section">
+				<label>
+					<span class="Fiddle-inputLabel">XSL style sheet</span>
+					<textarea name="xsl" class="Fiddle-input Textarea" data-component="Autocomplete"></textarea>
+				</label>
+			</div>
+
+			<div class="Fiddle-section">
+				<label>
+					<span class="Fiddle-inputLabel">Output</span>
+					<textarea name="output" class="Fiddle-input Textarea" readonly></textarea>
+				</label>
+			</div>
+
+		</div>
+
+		<div class="Fiddle-actions">
+			<button
+				type="button"
+				class="Button"
+				data-component="Example"
+				data-element-xml="[name=xml]"
+				data-element-xsl="[name=xsl]">
+				Example
+			</button>
+			<button type="submit" class="Fiddle-action Button">Process</button>
+		</div>
+
+		<div class="Fiddle-notifications" data-component="Notifications" aria-live="assertive"></div>
+
+	</form>
+
+
+</body>
+</html>

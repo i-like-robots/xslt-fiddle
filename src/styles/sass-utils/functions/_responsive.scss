@@ -1,0 +1,9 @@
+@function breakpoint($breakpoint-name) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint-name);
+
+  @if $breakpoint-value {
+    @return $breakpoint-value;
+  }
+
+  @warn "Breakpoint '#{$breakpoint-name}' not found in $breakpoints";
+}

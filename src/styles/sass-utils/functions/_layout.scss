@@ -1,0 +1,19 @@
+@function base-margin($direction, $size: 'medium') {
+  $margin-values: map-get($base-margins, $size);
+
+  @if $margin-values {
+    @return directional-value($margin-values, $direction);
+  }
+
+  @warn "Margin size '#{$size}' does not exist in $base-margins";
+}
+
+@function base-padding($direction, $size: 'medium') {
+  $padding-values: map-get($base-padding, $size);
+
+  @if $padding-values {
+    @return directional-value($padding-values, $direction);
+  }
+
+  @warn "Padding size '#{$size}' does not exist in $base-padding";
+}

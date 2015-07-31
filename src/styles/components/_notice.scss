@@ -1,0 +1,19 @@
+.Notice {
+  margin: 0;
+  box-shadow: $style-layer-shadow;
+  padding: map-get($base-padding, 'small');
+  color: #FFF;
+  text-shadow: $style-text-shadow;
+}
+
+.Notice--error {
+  background-color: $palette-red;
+}
+
+.Notice--warning {
+  background-color: $palette-yellow;
+}
+
+.Notice--success {
+  background-color: $palette-green;
+}

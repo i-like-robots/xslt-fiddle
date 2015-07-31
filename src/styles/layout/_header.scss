@@ -1,0 +1,13 @@
+.Header {
+  @include base-padding('medium');
+  background: $palette-blue-1;
+  color: #FFF;
+  text-shadow: $style-text-shadow;
+  box-shadow: $style-layer-shadow;
+
+  h1,
+  h1 + p {
+    margin: 0;
+  }
+
+}

@@ -1,0 +1,36 @@
+@function strip-units($val) {
+  @return ($val / ($val * 0 + 1));
+}
+
+@function unpack($shorthand) {
+  @if length($shorthand) == 1 {
+    @return nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1);
+  }
+  @if length($shorthand) == 2 {
+    @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 1) nth($shorthand, 2);
+  }
+  @if length($shorthand) == 3 {
+    @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 3) nth($shorthand, 2);
+  }
+
+  @return $shorthand;
+}
+
+@function directional-value($values, $direction) {
+  $values: unpack($values);
+
+  @if $direction == 'top' {
+    @return nth($values, 1);
+  }
+  @if $direction == 'right' {
+    @return nth($values, 2);
+  }
+  @if $direction == 'bottom' {
+    @return nth($values, 3);
+  }
+  @if $direction == 'left' {
+    @return nth($values, 4);
+  }
+
+  @warn "Direction '#{$direction}' does not exist";
+}

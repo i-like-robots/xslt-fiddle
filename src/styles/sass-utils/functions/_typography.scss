@@ -1,0 +1,20 @@
+@function text-breakpoints-for($text-size) {
+  $text-breakpoints: map-get($text-sizing, $text-size);
+
+  @if $text-breakpoints {
+    @return $text-breakpoints;
+  }
+
+  @warn "Text size '#{$text-size}' not found in $text-sizing";
+}
+
+@function text-properties-for($text-size, $breakpoint-name) {
+  $text-breakpoints: text-breakpoints-for($text-size);
+  $text-properties: map-get($text-breakpoints, $breakpoint-name);
+
+  @if $text-properties {
+    @return $text-properties;
+  }
+
+  @warn "Breakpoint '#{$breakpoint-name}' for text size '#{$text-size}' was not found";
+}

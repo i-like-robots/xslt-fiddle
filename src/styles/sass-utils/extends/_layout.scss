@@ -1,0 +1,25 @@
+%base-margin {
+  @include base-margin('small');
+
+  @include respond-above('medium') {
+    @include base-margin('medium');
+  }
+
+  @include respond-above('large') {
+    @include base-margin('large');
+  }
+
+}
+
+%base-padding {
+  @include base-padding('small');
+
+  @include respond-above('medium') {
+    @include base-padding('medium');
+  }
+
+  @include respond-above('large') {
+    @include base-padding('large');
+  }
+
+}

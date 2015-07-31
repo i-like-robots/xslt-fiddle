@@ -1,0 +1,10 @@
+:focus {
+  outline: 3px solid $palette-yellow;
+}
+
+body {
+  margin: 0;
+  background: $palette-gray-3;
+  font-family: sans-serif;
+  color: $palette-gray-1;
+}

@@ -1,0 +1,27 @@
+@mixin respond($above: null, $below: null) {
+  $breakpoint-value: if($above, breakpoint($above), breakpoint($below));
+
+  @if $breakpoint-value {
+    @if $above {
+      @media screen and (min-width: $breakpoint-value) {
+        @content;
+      }
+    } @elseif $below {
+      @media screen and (max-width: $breakpoint-value) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin respond-above($breakpoint-name) {
+  @include respond($above: $breakpoint-name) {
+    @content;
+  }
+}
+
+@mixin respond-below($breakpoint-name) {
+  @include respond($below: $breakpoint-name) {
+    @content;
+  }
+}
