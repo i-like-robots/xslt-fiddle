@@ -33,6 +33,7 @@
   height: -webkit-calc(100vh - 220px);
   height: calc(100vh - 220px);
   font: normal 15px/1.5 Consolas, monospace;
+  white-space: pre;
   vertical-align: bottom;
 }
 
@@ -45,7 +46,7 @@
   position: absolute;
   top: -6px;
   right: 0;
-  border: 1px dotted $palette-blue-2;
+  border: 1px dotted rgba($palette-blue-2, 0.75);
   padding: 4px 8px 3px;
   background: $palette-blue-3;
 }

@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>XSLT Fiddle</title>
-  <meta name="description" content="A playground to test XSL transformations">
-  <link rel="stylesheet" href="bundle.css">
+	<meta name="description" content="A playground to test XSL transformations">
+	<link rel="stylesheet" href="bundle.css">
 	<script src="bundle.js" async></script>
 </head>
 <body>
@@ -21,14 +21,19 @@
 		data-element-xml="[name=xml]"
 		data-element-xsl="[name=xsl]"
 		data-element-output="[name=output]"
-    onsubmit="return false">
+		onsubmit="return false">
 
 		<div class="Fiddle-sections">
 
 			<div class="Fiddle-section">
 				<label>
 					<span class="Fiddle-inputLabel">Source</span>
-					<textarea name="xml" class="Fiddle-input Textarea" data-component="Autocomplete"></textarea>
+					<textarea
+						name="xml"
+						wrap="off"
+						class="Fiddle-input Textarea"
+						data-component="Autocomplete Example"
+						data-element-snippet="#snippet-xml"></textarea>
 				</label>
 
 				<div class="Fiddle-inputType t-deci">
@@ -48,28 +53,25 @@
 			<div class="Fiddle-section">
 				<label>
 					<span class="Fiddle-inputLabel">XSL style sheet</span>
-					<textarea name="xsl" class="Fiddle-input Textarea" data-component="Autocomplete"></textarea>
+					<textarea
+						name="xsl"
+						wrap="off"
+						class="Fiddle-input Textarea"
+						data-component="Autocomplete Example"
+						data-element-snippet="#snippet-xsl"></textarea>
 				</label>
 			</div>
 
 			<div class="Fiddle-section">
 				<label>
 					<span class="Fiddle-inputLabel">Output</span>
-					<textarea name="output" class="Fiddle-input Textarea" readonly></textarea>
+					<textarea name="output" wrap="off" class="Fiddle-input Textarea" readonly></textarea>
 				</label>
 			</div>
 
 		</div>
 
 		<div class="Fiddle-actions">
-			<button
-				type="button"
-				class="Button"
-				data-component="Example"
-				data-element-xml="[name=xml]"
-				data-element-xsl="[name=xsl]">
-				Example
-			</button>
 			<button type="submit" class="Fiddle-action Button">Process</button>
 		</div>
 
@@ -77,6 +79,26 @@
 
 	</form>
 
+	<script id="snippet-xml" type="text/xml">
+		<?xml version="1.0"?>
+		<hello-world>
+			<greeter>an XSLT Programmer</greeter>
+			<greeting>Welcome to XSLT Fiddle!</greeting>
+		</hello-world>
+	</script>
+
+	<script id="snippet-xsl" type="text/xml">
+		<?xml version="1.0"?>
+		<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+			<xsl:template match="//hello-world">
+				<h1><xsl:value-of select="greeting" /></h1>
+				<xsl:apply-templates select="greeter" />
+			</xsl:template>
+			<xsl:template match="greeter">
+				<p>from <em><xsl:value-of select="." /></em></p>
+			</xsl:template>
+		</xsl:stylesheet>
+	</script>
 
 </body>
 </html>

@@ -15,7 +15,9 @@ void (function() {
   })({}, ['Fiddle', 'Example', 'Notifications', 'Autocomplete'])
 
   Array.prototype.forEach.call(document.querySelectorAll('[data-component]'), function(el) {
-    new components[el.getAttribute('data-component')](el)
+    el.getAttribute('data-component').split(' ').forEach(function(component) {
+      components[component] && new components[component](el)
+    })
   })
 
 })()

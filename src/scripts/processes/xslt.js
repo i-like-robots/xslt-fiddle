@@ -22,7 +22,7 @@ XSLT.prototype.source = function(input, html) {
 XSLT.prototype.stylesheet = function(input) {
   this.stylesheetTree = parseXML.apply(null, arguments)
 
-  if (this.sourceTree instanceof Error) {
+  if (this.stylesheetTree instanceof Error) {
     throw new Error('Failed to parse the stylesheet')
   }
 
