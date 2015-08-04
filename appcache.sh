@@ -11,10 +11,9 @@ echo >> $APPCACHE
 echo 'CACHE:' >> $APPCACHE
 
 cat <<EOF >> $APPCACHE
-/
-/favicon.ico
-/bundle.css
-/bundle.js
+favicon.ico
+bundle.css
+bundle.js
 EOF
 
 # echo >> $APPCACHE

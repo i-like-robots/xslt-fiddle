@@ -1,7 +1,11 @@
 bower_components/
 node_modules/
 
-public/*
-!public/index.html
+public/*.js
+public/*.css
+public/*.map
+public/*.appcache
 
 *.log
+
+.DS_Store
