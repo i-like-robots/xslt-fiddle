@@ -1,5 +1,6 @@
 .Textarea {
   @include base-padding('small');
+  margin: 0;
   border: 1px solid $palette-gray-2;
   box-shadow: $style-inset-shadow-top;
   background: #FFF;

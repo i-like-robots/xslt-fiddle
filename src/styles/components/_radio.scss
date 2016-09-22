@@ -5,28 +5,22 @@
 
   input[type=radio] {
     @extend %visually-hidden;
-    width: 1em;
-    height: 1em;
-    margin: 0 -1em -1em 0;
   }
 
 }
 
 .Radio-button {
   position: relative;
-  top: -1px;
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: top;
+  vertical-align: bottom;
 
   &:before {
     content: '';
-    position: absolute;
+    display: block;
     box-shadow: $style-inset-shadow-top;
     box-sizing: border-box;
-    width: 1em;
-    height: 1em;
+    width: 16px;
+    height: 16px;
     border: 1px solid $palette-gray-2;
     border-radius: 100%;
     background: $palette-gray-3;
@@ -46,8 +40,8 @@
     transform: translate(-50%, -50%);
     box-shadow: $style-inset-highlight-top;
     border-radius: 100%;
-    width: 0.5em;
-    height: 0.5em;
+    width: 8px;
+    height: 8px;
     background: $palette-gray-1;
 
     input[type=radio]:checked + & {

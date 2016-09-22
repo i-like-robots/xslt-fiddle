@@ -44,11 +44,11 @@
 
 .Fiddle-inputType {
   position: absolute;
-  top: -6px;
-  right: 0;
-  border: 1px dotted rgba($palette-blue-2, 0.75);
-  padding: 4px 8px 3px;
-  background: $palette-blue-3;
+  bottom: 0;
+  right: 8px;
+  border: 1px solid $palette-gray-2;
+  border-bottom: 0;
+  padding: 6px 10px 4px;
 }
 
 .Fiddle-inputRadio {
